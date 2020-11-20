@@ -22,6 +22,8 @@ before_install:
   - sudo echo "local   all         postgres                          trust" > $PGDATA/pg_hba.conf
   - sudo echo "local   all         all                               trust" >> $PGDATA/pg_hba.conf
   - sudo echo "host    all         all         127.0.0.1/32          trust" >> $PGDATA/pg_hba.conf
+  - sudo echo "host    all         all         10.23.0.0/16          trust" >> $PGDATA/pg_hba.conf
+  - sudo echo "host    all         all         10.24.0.0/16          trust" >> $PGDATA/pg_hba.conf
   - sudo echo "host    all         all         ::1/128               trust" >> $PGDATA/pg_hba.conf
   - sudo echo "logging_collector = on" >> $PGDATA/postgresql.conf
   - sudo echo "wal_level = replica" >> $PGDATA/postgresql.conf
