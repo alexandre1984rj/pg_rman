@@ -3,7 +3,8 @@ before_install:
   - sudo systemctl stop postgresql-12
   - sudo yum remove postgresql-server
   - sudo rm -rf /var/lib/postgresql
-  - sudo yum groupinstall "Development Tools"
+  - sudo yum groupinstall "Development Tools" -y
+  - sudo yum install gcc -y
   - sudo yum update
   - git clone https://github.com/postgres/postgres.git postgres-dev
   - cd postgres-dev
