@@ -1,6 +1,6 @@
 before_install:
   - psql --version
-  - sudo systemctl stop postgresql-12
+  - sudo systemctl stop postgresql
   - sudo yum remove postgresql-server
   - sudo rm -rf /var/lib/postgresql
   - sudo yum groupinstall "Development Tools" -y
